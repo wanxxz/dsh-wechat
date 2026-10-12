@@ -1,0 +1,16 @@
+# Dependencies
+node_modules/
+
+# Local self-check scratch: holds a real login token and the state file.
+# Never commit these.
+.selfcheck/
+
+# Logs and runtime output
+*.log
+load.log
+
+# Editor / OS cruft
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

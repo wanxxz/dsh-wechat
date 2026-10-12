@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "微信频道",
+    "description": "通过微信官方 iLink Bot（微信 ClawBot）通道接入微信：扫码登录后即可在微信里和 Harness 智能体对话，智能体也能主动推送消息。"
+  }
+}

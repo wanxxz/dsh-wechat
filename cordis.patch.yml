@@ -1,0 +1,27 @@
+# @wanxxz/dsh-wechat 的 bundle patch。
+#
+# 只插一条 Host 行：微信频道服务。它的 `config` 会被 profile 的
+# cordis.patch.yml 里同 id 的覆盖条目**整体替换**（是替换，不是合并），
+# 所以用户的调参写在 profile 那边。
+- insert:
+    - id: wechat
+      name: '@wanxxz/dsh-wechat'
+      config:
+        # always | if-credentials | never —— 总是登录 / 有凭据才登录 / 从不自动登录
+        autoStart: if-credentials
+        autoReply: true
+        allowedUserIds: []
+        workspacePath: ''
+        agentPreset: ''
+        permissionPreset: ''
+        tokenPath: ''
+        statePath: ''
+        baseUrl: ''
+        typingIndicator: true
+        agentTool: true
+        # reject | default —— 拒绝该审批 / 交给默认策略
+        approvalFallback: reject
+        # 打开 /wechat-channel/qr 备用页时自动开始登录
+        qrAutoLogin: true
+        # 命令回复的默认语言（用户发过中文后会自动记住该用户的语言）：zh | en
+        defaultLanguage: zh
